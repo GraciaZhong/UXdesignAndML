@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+
+    <!-- linking Google front -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+    <!-- plotly -->
+    <meta charset="UTF-8">
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/regression/2.0.1/regression.min.js'></script>
+    <!-- importing regression libary -->
+
+
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="parallax" data-parallax="scroll" data-z-index="1">
+            <div class="intro">
+                <h1 class="intro_title">Trump Vs Obama</h1>
+                <p class="intro_title_sub">Twitter Content Analysis</p>
+                <p class="intro_text">Comparing general attitude of Donald Trump and Barack Obama
+                    discuss how they use language differently to ask voters for support.
+                    <br>And how do they impact citizes by using Twitter during and after the presidency.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------Second Part: discussion of presidents using Twitter--------------------------------------------------------------------->
+
+    <p class="title1">Background of presidents using Twitter for election</p>
+
+    <div class="container2">
+        <div class="P2_graph">
+            <img src="img/vote.jpeg" width="500" height="400">
+        </div>
+
+        <div class="p2_text1">Any discussion of political change today must at least briefly consider social media and
+            <em class="hl">counterfactual advocacy.</em>
+            <br>In 2008, Obama made what was then unprecedented use of Facebook and Twitter to
+            reach young voters and, in 2012, both candidates employed social media extensively, although Obama did so
+            far more skillfully. <em class="rf">(McQuilkin, 2016, as cited in Bostdorff, 2017)</em>
+            <br>The 2016 campaign brought continued reliance on social media and the rise of the Twitter candidacy of
+            Donald J. Trump. <em class="rf">(Bostdorff, 2017)</em>
+        </div>
+
+        
+    </div>
+
+
+
+
+
+
+    <!------------------------------------Third Part: using "key words", allows users to explore more--------------------------------------------------------------------->
+
+
+    <header>"key word" discover the Truth</header>
+    
+
+    <!-----------"key Word" clusters--------------->
+    <div class="container4">
+        <div class="nothing"></div>
+        <div class="keyword1">
+            <button class="button" onclick="show_hide_t()">Keyword: "true"</button>
+            <div id='plotDiv_t' style="width: 600px; height: 600px"></div>
+
+            <div class="quotation_t">
+                <div class="bg_q">
+                    <blockquote>"Sorry, but the number of votes in the Swing States that we are talking about is VERY
+                        LARGE and totally OUTCOME DETERMINATIVE! Only the Democrats and some RINO’S would dare dispute
+                        this - even though they know it is true!"</blockquote>
+                </div>
+            </div>
+
+
+            <div class="quotation_o">
+                <div class="bg_q">
+                    <blockquote>"After a year of debate on health reform, it's time for a vote. It's time to make true
+                        on our promise to the American people. "</blockquote>
+                </div>
+            </div>
+            <hr>
+
+
+
+            <button class="button" onclick="show_hide_fl()">Keyword: "Wrong"</button>
+            <div id='plotDiv_fl' style="width: 600px; height: 600px"></div>
+
+            <div class="quotation_t">
+                <div class="bg_q">
+                    <blockquote>"Chris Krebs was totally excoriated and proven wrong at the Senate Hearing on the
+                        Fraudulent 2020 Election. Massive FRAUD took place with machines, people voting from out of
+                        state, illegals, dead people, no signatures—and so much more!"</blockquote>
+                </div>
+            </div>
+
+
+            <div class="quotation_o">
+                <div class="bg_q">
+                    <blockquote>"This is wrong: In 24 states, leaders are blocking Medicaid expansion for millions of
+                        Americans. http://ofa.bo/giq #PeopleOverPolitics "</blockquote>
+                </div>
+            </div>
+            <hr>
+
+            <button class="button" onclick="show_hide_fa()">Keyword: "Fake"</button>
+            <div id='plotDiv_fa' style="width: 600px; height: 600px"></div>
+            <div class="quotation_t">
+                <div class="bg_q">
+                    <blockquote>"Same guy that didn’t want to take off his mask yesterday in asking a question while
+                        being very socially distanced. Fake News!"</blockquote>
+                </div>
+            </div>
+            <hr>
+
+
+            <button class="button" onclick="show_hide_p()">Keyword: "Polity"</button>
+            <div id='plotDiv_p' style="width: 600px; height: 600px"></div>
+            <div class="quotation_t">
+                <div class="bg_q">
+                    <blockquote>"Don’t worry, wonderful & beautiful Alaska, there will be NO POLITICS in the Pebble Mine
+                        Review Process. I will do what is right for Alaska and our great Country!!!"</blockquote>
+                </div>
+            </div>
+
+
+            <div class="quotation_o">
+                <div class="bg_q">
+                    <blockquote>"'We don’t need a whole bunch of politicians in Washington, most of whom are male,
+                        making health care decisions for women.'—President Obama "</blockquote>
+                </div>
+            </div>
+            <hr>
+
+        </div>
+    </div>
+    <div class="nothing2"></div>
+    </div>
+
+
+
+    <div class="keyword_text">
+        <h2 class="content">Discussion</h2>
+        <div class="content">
+            <p>
+                The
+                hollowed out neoliberal language Obama offered, <em class="hl">filled with mythological imaginations of
+                    hope,
+                    possibility and meritocracy</em>, has allowed Trump to step even further away from structured
+                ideological
+                positions and into the realm of affect, or ‘emo-truth’ <em class="rf">(Redmond 2010; Harsin 2020 as cited in Prins,
+                2020)</em>.
+                <em class="hl">Trump often uses sentiment stance at the end of his of Tweets (we could find from
+                    quotes)</em>
+                <br>– this is his salesman coming out. <em class="hl">Sentiment stances are persuasion techniques used
+                    to control
+                    somebody’s emotional reaction when you’re speaking to them</em> – it’s rare to see this in writing,
+                and that
+                makes you ask the question, should we treat this as a normal written communication? Whilst Barack Obama
+                (and most public figures) use social media platforms to write, Donald Trump uses them to speak. <em class="rf">(Adams,
+                2021)</em>
+            </p>
+        </div>
+    </div>
+
+    <!------------------------------------Fourth Part: disscussing hot topics on twitter when they are president--------------------------------------------------------------------->
+
+    <header>Different Reactions on Hot Topics</header>
+    <div class="container3">
+
+        <div class="covid_text">
+            <h2>Coronavirus</h2>
+            <p>Visualizing the word frequency of tweets for COVID-19 in social networks by employing word
+                clouds. The bigger and bolder the keyword, the more often it is mentioned within the
+                tweets, and the more important it is.
+            </p>
+            <img src="img/cloud.png" style="width:500px;height:400px;">
+
+            <p>The highest keyword is “realdonaldtrump.” People strongly focus on the U.S. president's action and policy
+                to cope with COVID-19 (see IMAGE below). 
+            </p>
+            <img src="img/map.png" style="width:500px;height:400px;">
+            <p>While Barack Obama plays a key role
+                in the networks, his centrality is relatively low compared to his followers. In contrast, Donald Trump
+                exerts the strongest impact on networks, although his followers are quite fewer in number than those of
+                Barack Obama.  <em class="rf">(Yum, 2020)</em>
+            </p>
+        </div>
+        <div class="covid_graph">
+            <div id='plotDiv_cov19' style="width: 800px; height: 800px"></div>
+        </div>
+        <div class="asia_text">
+            <h2>Asia</h2>
+
+            <p>Throughout his presidential election campaign in 2016, Trump accused Asian nations of ‘taking advantage’
+                of the US through unfair trade policies and general reluctance to provide for their own security. <em class="rf">(Kolmaš &
+                Kolmašová, 2019)</em>.
+            </p>
+            <p>As the presidency unfolds, Trump has switched away from these campaign threats in favour of good
+                diplomatic relations with the Koreans and Japanese. The frequent U-turns in his
+                position can hardly indicate rationalism based on calculation of national benefits.
+                <em class="hl">His rhetoric isbased on pragmatic logic, which rests on given political circumstances and
+                    their subjective assessment
+                    through personal experience.</em>
+                While his statements have been criticized as inconsistent and
+                incomprehensive, pragmatism provides a persuasive explanation of his rhetoric.
+                Trump’s pragmatic policies make use of a rising China to promote American interests
+                in Asia. Contrary to Trump,
+                <em class="hl">Obama’s multilateral approach to Asia was based on a norm-based vocabulary calling for
+                    freedom,
+                    democracy, rule of law and increased cooperation.</em> Obama was very active in promoting and
+                cooperating in
+                institutions throughout Asia and initiated a set of agreements to foster American leadership there.
+                However, the lofty rhetoric and multilateral initiative only marginally translated into practical
+                policies and did not do much to ease tensions in East and Southeast Asia.<em class="rf">(Kolmaš & Kolmašová,
+                2019)</em>
+            </p>
+        </div>
+        <div class="asia_graph">
+            <div id='plotDiv_a' style="width: 800px; height: 700px">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!------------------------------------final part: summery--------------------------------------------------------------------->
+
+
+    <div class="sum_img" data-parallax="scroll" data-z-index="1">
+        <h2 class="title_final"> Conclusion</h2>
+    </div>
+    <div class="sum">
+        <h3> Social Impact</h3>
+        <p>Barack Obama still exerts a powerful impact on communication networks, even though he completed the
+            presidential job a long time ago.
+            Moreover, these studies demonstrates that key players, such as Donald Trump,
+            Barack Obama, African organizations, and the BBC, are located in the central networks. <em class="rf">(Yum, 2020)</em>
+        </p>
+        <h3> Counterfactual Advocacy in Twitter</h3>
+        <p>Too many posts and too many links also consist of counterfactual advocacy, which Steven Goldzwig defines
+            as "a discourse designed to deny, evade, or misdirect its audiences from facts, inferences, or
+            descriptions of events" necessary for constructive, democratic decision making. <em class="rf">(Robinson, 2017,
+            as cited in Bostdorff, 2017)</em>
+            Research shows that the top 20 "fake-news" stories in the last three months of the 2016 campaign received
+            more reactions, shares, and comments than the top 20 actual news stories. 
+            Across time, presidential candidates like them have read their environments for the rhetorical valences
+            that Stuckey identifies and have used their discourse to put audiences in the proper emotional frame of
+            mind to support their candidacies and the change they advocate. <em class="rf">(Bostdorff, 2017)</em>
+        </p>
+    </div>
+
+    <div class="reference" data-parallax="scroll" data-z-index="1">
+        
+        <div class="research">
+            <h2>Research</h2>
+            <p> Bostdorff, D. M. (2017). Obama, Trump, and Reflections on the Rhetoric of Political Change. Rhetoric &
+                Public Affairs, 20(4), 695–706. https://doi.org/10.14321/rhetpublaffa.20.4.0695
+
+                <br>CEO, P. A. (2021, February 8). How Donald Trump uses Twitter differently to Barack Obama. Www.prodo.com.
+                https://www.prodo.com/blog/donald-trump-uses-twitter-differently-barack-obama
+
+                <br>Kolmaš, M., & Kolmašová, Š. (2019). A “pivot” that never existed: America’s Asian strategy under Obama
+                and Trump. Cambridge Review of International Affairs, 32(1), 61–79.
+                https://doi.org/10.1080/09557571.2018.1553936
+
+
+                <br>Prins, A. (2020). Analysing celebrity politics from Obama to Trump. Celebrity Studies, 11(4), 504–507.
+                https://doi.org/10.1080/19392397.2020.1834225
+
+
+                <br>Yum, S. (2020). Social Network Analysis for Coronavirus (COVID‐19) in the United States. Social Science
+                Quarterly, 101(4), 1642–1647. https://doi.org/10.1111/ssqu.12808</p>
+        </div>
+        <div class="image">
+            <h2>Image</h2>
+            <p>Acker, D. (2018). Former President Barack Obama spoke to students at the University of Illinois at
+                Urbana-Champaign on Friday.Credit... In The New York Times. https://unsplash.com/photos/v_e3Hha4EBA
+
+                <br>Banks, C. (2020). The 2020 Presidential Debate. In Unsplash. https://unsplash.com/photos/BY-R0UNRE7w
+
+                <br>DIETSCH, K. (2018). Donald Trump, First Lady Melania Trump, former President Barack Obama, and former
+                First Lady Michelle Obama at the inauguration. In vanityfair.
+                https://www.vanityfair.com/style/2018/11/barack-obama-calls-out-donald-trump-mommy-issues
+
+                <br>Dietsch, K. (n.d.). President Donald Trump makes a gun motion as he speaks about the shooting of House
+                Minority Whip Steve Scalise while speaking on his impeachment trial at the White House. In Kevin Dietsch
+                Photography. https://dietsch.photoshelter.com/portfolio/G0000F56Uy1oJ3Co
+
+                <br>Dietsch, K. (2019). Trump, Obama tie for Americans’ most-admired man. In politico.
+                https://www.politico.com/news/2019/12/30/trump-obama-tie-americas-most-admired-man-091023
+
+                <br>Shamsudeen, A. (2015). In Unsplash. https://unsplash.com/photos/Sf8g7a3duRY/info
+            </p>
+        </div>
+    </div>
+
+
+
+    <script src='main.js'></script>
+    <!-- heading page "scrolling image" tutorial source from internet from https://www.youtube.com/watch?v=d34GsFz-HkY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js-1.5.0/parallax.js"></script>
+
+</body>
